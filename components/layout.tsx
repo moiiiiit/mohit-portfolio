@@ -106,7 +106,7 @@ export default function Layout({ children, loading }: any) {
                 <div className="mx-auto flex flex-col max-w-7xl md:py-6 lg:py-6 md:px-6 lg:px-8 items-center min-h-full">{children}</div>
             </main>
             {loading &&
-                <main className="w-screen h-screen flex justify-center items-center z-10 absolute top-0 left-0 bg-black">
+                <main className="w-screen h-screen flex justify-center items-center z-40 absolute top-0 left-0 bg-black">
                     <Image
                         src="/MBLogo.png"
                         alt="Mohit Bhole"
