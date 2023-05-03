@@ -100,15 +100,14 @@ export default class Home extends React.Component {
                   <time dateTime={education['date']} className="text-slate-50">
                     {education['date']}
                   </time>
-                  <a
-                    href={education['institution']}
-                    className="relative z-10 rounded-full bg-slate-100 px-3 py-1.5 font-medium text-slate-800 hover:bg-slate-100"
+                  <p
+                    className="relative z-10 rounded-full bg-slate-100 px-3 py-1.5 font-medium text-slate-800 hover:bg-slate-300"
                   >
                     {education['institution']}
-                  </a>
+                  </p>
                 </div>
                 <div className="group srelative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-50 group-hover:text-slate-600">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-50">
                     <p>
                       <span className="absolute inset-0" />
                       {education['degree']}
