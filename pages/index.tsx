@@ -88,20 +88,20 @@ export default class Home extends React.Component {
           </div>
           <div className='flex flex-col gap-2 w-fit md:w-fit md:max-w-md self-center mx-6 md:mx-0'>
             <h2 className="text-xl font-mono mb-2 text-center md:text-left">Contact</h2>
-            <div className="flex flex-row gap-16 items-center justify-between">
-              <Image src="/github.png" alt="Github" width="36" height="36" style={{ borderRadius: '100px', overflow: 'hidden' }} />
+            <div className="flex flex-row gap-16 items-center justify-between text-sm">
+              <Image src="/github.png" alt="Github" width="24" height="24" style={{ borderRadius: '100px', overflow: 'hidden' }} />
               <a href={this.state.githubUrl} target="_blank">{this.state.github}</a>
             </div>
-            <div className="flex flex-row gap-16 items-center justify-between">
-              <Image src="/linkedin.png" alt="LinkedIn" width="36" height="36" />
+            <div className="flex flex-row gap-16 items-center justify-between text-sm">
+              <Image src="/linkedin.png" alt="LinkedIn" width="24" height="24" />
               <a href={this.state.linkedinUrl} target="_blank">{this.state.linkedin}</a>
             </div>
-            <div className="flex flex-row gap-16 items-center justify-between">
-              <Image src="/devpost.png" alt="DevPost" width="36" height="36" />
+            <div className="flex flex-row gap-16 items-center justify-between text-sm">
+              <Image src="/devpost.png" alt="DevPost" width="24" height="24" />
               <a href={this.state.devpostUrl} target="_blank">{this.state.devpost}</a>
             </div>
-            <div className="flex flex-row gap-16 items-center justify-between">
-              <Image src="/whatsapp.avif" alt="Whatsapp" width="36" height="36" />
+            <div className="flex flex-row gap-16 items-center justify-between text-sm">
+              <Image src="/whatsapp.avif" alt="Whatsapp" width="24" height="24" />
               <a href={this.state.whatsappUrl} target="_blank">{this.state.whatsapp}</a>
             </div>
           </div>
