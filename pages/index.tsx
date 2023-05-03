@@ -30,7 +30,7 @@ export default class Home extends React.Component {
   }
 
   componentDidMount(): void {
-    this.setState({loading: true});
+    this.setState({ loading: true });
     const fetchData = async () => {
       try {
         const image = await getFile('profile_home.png');
@@ -68,9 +68,8 @@ export default class Home extends React.Component {
   render() {
     return (
       <Layout loading={this.state.loading}>
-        {/* <h1 className="text-4xl italic bold antialiased tracking-wider underline underline-offset-8 decoration-1">Mohit Bhole</h1> */}
         < div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between w-full h-full items-center my-10" >
-          <div className="flex flex-col gap-2 max-w-FULL md:max-w-lg lg:max-w-xl self-start mx-6 md:mx-0">
+          <div className="flex flex-col gap-2 max-w-full md:max-w-lg lg:max-w-xl self-start mx-6 md:mx-0">
             <div className="flex flex-row items-center justify-between mb-6">
               <div>
                 <h2 className="text-3xl font-mono mb-10">Namaste 🙏, <span style={{ whiteSpace: 'nowrap' }}>I{"'"}m <u className="underline-offset-4">{this.state.firstName}</u></span>
@@ -78,9 +77,9 @@ export default class Home extends React.Component {
                 <h3 className="text-xl mt-4">{this.state.title}</h3>
               </div>
               {this.state.profilepicsrc ?
-                <Image src={this.state.profilepicsrc} alt="Profile Picture" height={180} width={180} onLoad={() => this.setState({loading: false})}></Image> : <></>}
+                <Image src={this.state.profilepicsrc} alt="Profile Picture" height={180} width={180} onLoad={() => this.setState({ loading: false })}></Image> : <></>}
               {(!this.state.profilepicsrc && this.state.profilepic) ?
-                <Image src={this.state.profilepic} alt="Profile Picture" height={180} width={180} onLoad={() => this.setState({loading: false})}></Image> : <></>}
+                <Image src={this.state.profilepic} alt="Profile Picture" height={180} width={180} onLoad={() => this.setState({ loading: false })}></Image> : <></>}
             </div>
 
             <p className="text-sm">--&gt; {this.state.description_1}</p>
