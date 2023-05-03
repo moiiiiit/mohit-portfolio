@@ -9,13 +9,19 @@ export default function Resume() {
         height: undefined,
     } as Record<string, number | undefined>);
     const [resumeUrl, setResumeUrl] = useState("")
+    const [loading, setLoading] = useState(true)
     const handleWindowResize = () => {
         setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
 
     useEffect(() => {
+        setLoading(true);
         handleWindowResize();
-        const fetchData = async () => setResumeUrl((await getDocument("resume", "1")).result?.data()?.url);
+        const fetchData = async () => {
+            setResumeUrl((await getDocument("resume", "1")).result?.data()?.url);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            setLoading(false);
+        };
         fetchData();
         window.addEventListener('resize', handleWindowResize);
         return () => {
@@ -26,7 +32,7 @@ export default function Resume() {
 
 
     return (
-        <Layout>
+        <Layout loading={loading}>
             <span className="flex flex-row">
                 <h2 className="text-3xl font-mono">Resume</h2>
                 <a href={resumeUrl.replace('embed','download')}>
