@@ -6,6 +6,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ['mohitbhole.com']
   },
+  trailingSlash: true,
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
