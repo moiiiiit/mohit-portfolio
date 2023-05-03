@@ -8,6 +8,8 @@ export default class Experience extends React.Component {
     }
     constructor(props: any) {
         super(props);
+    }
+    componentDidMount(): void {
         const fetchData = async () => {
             const workExperienceCollection = (await getCollection("work_experience")).result;
             workExperienceCollection.forEach((doc: { data: any }) => {

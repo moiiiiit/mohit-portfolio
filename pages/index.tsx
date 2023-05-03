@@ -1,7 +1,7 @@
 // pages/index.js
 import Image from 'next/image'
 import Layout from "@/components/layout";
-import { getDocument, getCollection } from '@/firebase/firestore';
+import { getDocument, getCollection, getFile } from '@/firebase/firestore';
 import React from 'react';
 
 export default class Home extends React.Component {
@@ -20,12 +20,25 @@ export default class Home extends React.Component {
     linkedinUrl: "https://www.linkedin.com/in/",
     whatsappUrl: "",
     profilepic: "",
-    education: []
+    education: [],
+    profilepicsrc: ""
   };
 
   constructor(props: any) {
     super(props);
+  }
+
+  componentDidMount(): void {
     const fetchData = async () => {
+      try {
+        const image = await getFile('profile_home.png');
+        if (image) {
+          this.state.profilepicsrc = image.result;
+        }
+      } catch (e) {
+
+      }
+
       const educationCollection = (await getCollection("education")).result;
       educationCollection.forEach((doc: { data: any }) => { this.state.education.push(doc.data() as never) })
       const data = (await getDocument("profile", "1")).result?.data();
@@ -47,7 +60,6 @@ export default class Home extends React.Component {
       });
     };
     fetchData();
-
   }
 
   render() {
@@ -58,11 +70,13 @@ export default class Home extends React.Component {
           <div className="flex flex-col gap-2 max-w-FULL md:max-w-lg lg:max-w-xl self-start mx-6 md:mx-0">
             <div className="flex flex-row items-center justify-between mb-6">
               <div>
-                <h2 className="text-3xl font-mono mb-10">Namaste 🙏, <span style={{whiteSpace: 'nowrap'}}>I{"'"}m <u className="underline-offset-4">{this.state.firstName}</u></span>
+                <h2 className="text-3xl font-mono mb-10">Namaste 🙏, <span style={{ whiteSpace: 'nowrap' }}>I{"'"}m <u className="underline-offset-4">{this.state.firstName}</u></span>
                 </h2>
                 <h3 className="text-xl mt-4">{this.state.title}</h3>
               </div>
-              {this.state.profilepic ?
+              {this.state.profilepicsrc ?
+                <Image src={this.state.profilepicsrc} alt="Profile Picture" height={180} width={180}></Image> : <></>}
+              {(!this.state.profilepicsrc && this.state.profilepic) ?
                 <Image src={this.state.profilepic} alt="Profile Picture" height={180} width={180}></Image> : <></>}
             </div>
 
