@@ -5,6 +5,7 @@ import { getCollection } from '@/firebase/firestore';
 export default class Experience extends React.Component {
     state = {
         workExperience: [],
+        projectExperience: [],
         loading: true,
     }
     constructor(props: any) {
@@ -17,6 +18,11 @@ export default class Experience extends React.Component {
             this.state.workExperience = [];
             workExperienceCollection.forEach((doc: { data: any }) => {
                 this.state.workExperience.push(doc.data() as never)
+            });
+            const projectExperienceCollection = (await getCollection("project_experience")).result;
+            this.state.projectExperience = [];
+            projectExperienceCollection.forEach((doc: { data: any }) => {
+                this.state.projectExperience.push(doc.data() as never)
             });
             await new Promise(resolve => setTimeout(resolve, 800));
             this.setState({ loading: false });
@@ -66,6 +72,46 @@ export default class Experience extends React.Component {
                         </article>
                     ))}
                 </div>
+
+                {this.state.projectExperience.length > 0 && (
+                    <><h2 className="text-3xl font-mono mt-10">Project Experience</h2><div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 mb-10 border-t border-slate-200 mt-2 pt-6 sm:mt-4 sm:pt-10 lg:mx-0 lg:grid-cols-2">
+                        {this.state.projectExperience.map((experience, index) => (
+                            <article key={index} style={{ breakInside: 'avoid' }} className="flex max-w-xl flex-col items-start justify-between h-min">
+                                <div
+                                    className="w-full h-fit border-2 rounded-md border-white my-4 flex items-center justify-center"
+                                    style={{height: "320px"}}
+                                >
+                                    <video autoPlay muted playsInline loop
+                                        src={experience['videoUrl']}
+                                        style={{height: "300px"}}
+                                    />
+                                </div>
+
+                                <div className="flex items-center gap-x-4 text-xs">
+                                    <p className="text-slate-50">
+                                        {experience['company']}
+                                    </p>
+                                    <p
+                                        className="relative z-10 rounded-full bg-slate-100 px-3 py-1.5 font-medium text-slate-800 hover:bg-slate-300"
+                                    >
+                                        {experience['heading']}
+                                    </p>
+                                </div>
+                                <div className="group srelative">
+                                    <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-50">
+                                        {experience['title']} {experience['link'] && <a href={experience['link']} style={{ color: "rgb(29 78 216)" }} target="_blank">[Link]</a>}
+                                    </h3>
+                                    {experience['bullet1'] != undefined && (
+                                        <p className="mt-5 line-clamp-3 text-sm leading-6 text-slate-400">--&gt; {experience['bullet1']}</p>
+                                    )}
+                                    {experience['bullet2'] != undefined && (
+                                        <p className="mt-5 line-clamp-3 text-sm leading-6 text-slate-400">--&gt; {experience['bullet2']}</p>
+                                    )}
+                                </div>
+                            </article>
+                        ))}
+                    </div></>)
+                }
             </Layout>
         )
     }
