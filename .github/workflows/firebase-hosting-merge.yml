@@ -18,5 +18,3 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MOHIT_PORTFOLIO_93A59 }}'
           channelId: live
           projectId: mohit-portfolio-93a59
-        env:
-          FIREBASE_CLI_EXPERIMENTS: webframeworks
