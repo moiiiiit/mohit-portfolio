@@ -6,6 +6,17 @@ const nextConfig = {
     unoptimized: true,
     domains: ['mohitbhole.com']
   },
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+      '/experience': { page: '/experience' },
+      '/resume': { page: '/resume' },
+      '/life': { page: '/life' },
+    }
+  },
 }
 
 module.exports = nextConfig

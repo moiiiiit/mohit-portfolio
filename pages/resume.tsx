@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import { getDocument } from '@/firebase/firestore';
+import { ArrowDownOnSquareIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from 'react';
 
 export default function Resume() {
@@ -22,17 +23,27 @@ export default function Resume() {
         };
     }, []);
 
+
+
     return (
         <Layout>
-            <h1 className="text-3xl font-bold font-mono bold antialiased tracking-wider underline underline-offset-8 decoration-1">Resume</h1>
+            <span className="flex flex-row">
+                <h2 className="text-3xl font-mono">Resume</h2>
+                <a href={resumeUrl.replace('embed','download')}>
+                    <ArrowDownOnSquareIcon color="rgb(29 78 216)" className="h-8 w-8 ml-2 mb-1" aria-hidden="true" />
+                </a>
+            </span>
+
             <iframe
-                className="mt-6"
+                className="mt-6 border-t border-slate-200"
                 style={{ height: (windowSize.width ?? 769) >= 768 ? 'calc(100vh - 231px)' : 'calc(100vh - 159px)' }}
                 src={resumeUrl}
                 width="100%"
                 height="100%">
 
             </iframe>
+
+
         </Layout>
     )
 }
