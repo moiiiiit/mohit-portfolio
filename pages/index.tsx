@@ -99,7 +99,7 @@ export default class Home extends React.Component {
             </div>
             <div className="flex flex-row gap-16 items-center justify-between">
               <Image src="/devpost.png" alt="DevPost" width="36" height="36" />
-              <a href={this.state.githubUrl} target="_blank">{this.state.devpost}</a>
+              <a href={this.state.devpostUrl} target="_blank">{this.state.devpost}</a>
             </div>
             <div className="flex flex-row gap-16 items-center justify-between">
               <Image src="/whatsapp.avif" alt="Whatsapp" width="36" height="36" />
