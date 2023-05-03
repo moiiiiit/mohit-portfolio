@@ -1,4 +1,6 @@
+import { fontFamily as _fontFamily } from 'tailwindcss/defaultTheme'
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,5 +16,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  variants: {},
+  plugins: [require('@tailwindcss/typography')],
 }
