@@ -18,6 +18,7 @@ export default function Layout({ children }: PropsWithChildren) {
             className={`${inter.className} min-h-screen min-w-screen`}
         >
             <header>
+                <title>Mohit Bhole</title>
                 <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
                         <Link href="/" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-2 py-2 transition-colors hover:border-slate-300 hover:bg-slate-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
