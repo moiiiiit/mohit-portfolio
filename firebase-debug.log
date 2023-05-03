@@ -1,0 +1,36 @@
+[debug] [2023-05-03T09:54:37.559Z] ----------------------------------------------------------------------
+[debug] [2023-05-03T09:54:37.561Z] Command:       /usr/local/bin/firebase /Users/mohitpersonal/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-05-03T09:54:37.561Z] CLI Version:   11.29.1
+[debug] [2023-05-03T09:54:37.561Z] Platform:      darwin
+[debug] [2023-05-03T09:54:37.561Z] Node Version:  v16.16.0
+[debug] [2023-05-03T09:54:37.564Z] Time:          Wed May 03 2023 04:54:37 GMT-0500 (Central Daylight Time)
+[debug] [2023-05-03T09:54:37.564Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-03T09:54:37.679Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-03T09:54:37.680Z] > authorizing via signed-in user (mohitb.steam@gmail.com)
+[debug] [2023-05-03T09:54:37.680Z] [iam] checking project mohit-portfolio-93a59 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-03T09:54:37.683Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mohit-portfolio-93a59:testIamPermissions [none]
+[debug] [2023-05-03T09:54:37.684Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mohit-portfolio-93a59:testIamPermissions x-goog-quota-user=projects/mohit-portfolio-93a59
+[debug] [2023-05-03T09:54:37.685Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mohit-portfolio-93a59:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-03T09:54:37.939Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mohit-portfolio-93a59:testIamPermissions 200
+[debug] [2023-05-03T09:54:37.942Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mohit-portfolio-93a59:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-03T09:54:37.945Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mohit-portfolio-93a59 [none]
+[debug] [2023-05-03T09:54:38.183Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mohit-portfolio-93a59 200
+[debug] [2023-05-03T09:54:38.186Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mohit-portfolio-93a59 {"projectId":"mohit-portfolio-93a59","projectNumber":"769186125435","displayName":"mohit-portfolio","name":"projects/mohit-portfolio-93a59","resources":{"hostingSite":"mohit-portfolio-93a59"},"state":"ACTIVE","etag":"1_62165aa6-666b-450a-9216-2ce2a6663c33"}
+[debug] [2023-05-03T09:54:41.467Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/sites pageToken=&pageSize=10
+[debug] [2023-05-03T09:54:41.755Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/sites 200
+[debug] [2023-05-03T09:54:41.757Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/sites {"sites":[{"name":"projects/mohit-portfolio-93a59/sites/mohit-portfolio-93a59","defaultUrl":"https://mohit-portfolio-93a59.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-05-03T09:54:41.759Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/sites 
+[debug] [2023-05-03T09:54:42.003Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/sites 200
+[debug] [2023-05-03T09:54:42.004Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/sites {"sites":[{"name":"projects/mohit-portfolio-93a59/sites/mohit-portfolio-93a59","defaultUrl":"https://mohit-portfolio-93a59.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-05-03T09:54:42.005Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/webApps/-/config [none]
+[debug] [2023-05-03T09:54:42.387Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/webApps/-/config 200
+[debug] [2023-05-03T09:54:42.388Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mohit-portfolio-93a59/webApps/-/config {"projectId":"mohit-portfolio-93a59","appId":"1:769186125435:web:8ee52633ed05b5938834de","storageBucket":"mohit-portfolio-93a59.appspot.com","apiKey":"AIzaSyAAKO-L9oB8e61cVM3-QTn-BBDt3SdgDOc","authDomain":"mohit-portfolio-93a59.firebaseapp.com","messagingSenderId":"769186125435","measurementId":"G-3S9GX8H4SS"}
+[debug] [2023-05-03T09:55:20.243Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:828:11)
+    at Object.execSync (node:child_process:899:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/mohitpersonal/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:399:42)
+    at async deploy (/Users/mohitpersonal/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

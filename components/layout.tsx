@@ -101,7 +101,7 @@ export default function Layout({ children }: PropsWithChildren) {
                     </Dialog.Panel>
                 </Dialog>
             </header>
-            <div className="mx-auto flex flex-col max-w-7xl md:py-6 lg:py-6 md:px-10 lg:px-20 items-center min-h-full">{children}</div>
+            <div className="mx-auto flex flex-col max-w-7xl md:py-6 lg:py-6 md:px-6 lg:px-8 items-center min-h-full">{children}</div>
         </main>
     )
 }

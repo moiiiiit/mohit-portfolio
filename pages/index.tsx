@@ -109,7 +109,6 @@ export default class Home extends React.Component {
                 <div className="group srelative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-50">
                     <p>
-                      <span className="absolute inset-0" />
                       {education['degree']}
                     </p>
                   </h3>

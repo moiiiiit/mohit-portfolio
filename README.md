@@ -1,7 +1,7 @@
 ## Mohit's Portfolio Website
 
 This is a Portfolio project build using [Next.js](https://nextjs.org/) and deployed using Firebase. 
-It also uses Firestore to store user profile.
+It also uses Firestore to store user profile and Github Actions to auto deploy commits.
 
 ## Getting Started
 
