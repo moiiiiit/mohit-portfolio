@@ -1,8 +1,8 @@
 // pages/index.js
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import React, { PropsWithChildren, useState } from "react";
-import { Dialog, Disclosure } from '@headlessui/react';
+import React, { useState } from "react";
+import { Dialog } from '@headlessui/react';
 import {
     Bars3Icon,
     XMarkIcon
@@ -15,18 +15,6 @@ export default function Layout({ children, loading }: any) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
         <>
-            {loading &&
-                <main className="min-h-screen min-w-screen flex justify-center items-center z-10">
-                    <Image
-                        src="/MBLogo.png"
-                        alt="Mohit Bhole"
-                        width="80"
-                        height="80" />
-                    <ClimbingBoxLoader
-                        color='#ffffff'
-                        aria-label='Loading Spinner'>
-                    </ClimbingBoxLoader>
-                </main>}
             <main
                 className={`${inter.className} min-h-screen min-w-screen`}
             >
@@ -117,7 +105,18 @@ export default function Layout({ children, loading }: any) {
                 </header>
                 <div className="mx-auto flex flex-col max-w-7xl md:py-6 lg:py-6 md:px-6 lg:px-8 items-center min-h-full">{children}</div>
             </main>
-
+            {loading &&
+                <main className="w-screen h-screen flex justify-center items-center z-10 absolute top-0 left-0 bg-black">
+                    <Image
+                        src="/MBLogo.png"
+                        alt="Mohit Bhole"
+                        width="80"
+                        height="80" />
+                    <ClimbingBoxLoader
+                        color='#ffffff'
+                        aria-label='Loading Spinner'>
+                    </ClimbingBoxLoader>
+                </main>}
         </>
     )
 }
