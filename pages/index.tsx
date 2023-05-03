@@ -42,6 +42,7 @@ export default class Home extends React.Component {
       }
 
       const educationCollection = (await getCollection("education")).result;
+      this.state.education = [];
       educationCollection.forEach((doc: { data: any }) => { this.state.education.push(doc.data() as never) })
       const data = (await getDocument("profile", "1")).result?.data();
       this.setState({

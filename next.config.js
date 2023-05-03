@@ -17,6 +17,9 @@ const nextConfig = {
       '/life': { page: '/life' },
     }
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig

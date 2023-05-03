@@ -14,6 +14,7 @@ export default class Experience extends React.Component {
         this.setState({ loading: true });
         const fetchData = async () => {
             const workExperienceCollection = (await getCollection("work_experience")).result;
+            this.state.workExperience = [];
             workExperienceCollection.forEach((doc: { data: any }) => {
                 this.state.workExperience.push(doc.data() as never)
             });
@@ -27,7 +28,7 @@ export default class Experience extends React.Component {
             <Layout loading={this.state.loading}>
                 <h2 className="text-3xl font-mono mt-10">Work Experience</h2>
 
-                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 border-t border-slate-200 mt-2 pt-6 sm:mt-4 sm:pt-10 lg:mx-0 lg:grid-cols-2">
+                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 mb-10 border-t border-slate-200 mt-2 pt-6 sm:mt-4 sm:pt-10 lg:mx-0 lg:grid-cols-2">
                     {this.state.workExperience.map((experience, index) => (
                         <article key={index} style={{ breakInside: 'avoid' }} className="flex max-w-xl flex-col items-start justify-between h-min">
                             <div className="flex items-center gap-x-4 text-xs">
