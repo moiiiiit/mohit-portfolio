@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import getDocument from "@/firebase/firestore";
+import { getDocument } from '@/firebase/firestore';
 import { useState, useEffect } from 'react';
 
 export default function Resume() {

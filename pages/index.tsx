@@ -58,7 +58,7 @@ export default class Home extends React.Component {
           <div className="flex flex-col gap-2 max-w-FULL md:max-w-lg lg:max-w-xl self-start mx-6 md:mx-0">
             <div className="flex flex-row items-center justify-between mb-6">
               <div>
-                <h2 className="text-3xl font-mono mb-10">Namaste 🙏, I'm <u className="underline-offset-4">{this.state.firstName}</u>
+                <h2 className="text-3xl font-mono mb-10">Namaste 🙏, I{"'"}m <u className="underline-offset-4">{this.state.firstName}</u>
                 </h2>
                 <h3 className="text-xl mt-4">{this.state.title}</h3>
               </div>
@@ -94,8 +94,8 @@ export default class Home extends React.Component {
           <h2 className="text-3xl font-mono mt-10">Academic Background</h2>
 
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 border-t border-slate-200 mt-2 pt-6 sm:mt-4 sm:pt-10 lg:mx-0 lg:grid-cols-2">
-            {this.state.education.map((education) => (
-              <article className="flex max-w-xl flex-col items-start justify-between">
+            {this.state.education.map((education, index) => (
+              <article key={index} className="flex max-w-xl flex-col items-start justify-between">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={education['date']} className="text-slate-50">
                     {education['date']}
@@ -107,7 +107,7 @@ export default class Home extends React.Component {
                     {education['institution']}
                   </a>
                 </div>
-                <div className="group relative">
+                <div className="group srelative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-50 group-hover:text-slate-600">
                     <p>
                       <span className="absolute inset-0" />
