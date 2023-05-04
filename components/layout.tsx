@@ -22,7 +22,7 @@ export default function Layout({ children, loading }: any) {
                     <title>Mohit Bhole</title>
                     <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8" aria-label="Global">
                         <div className="flex lg:flex-1">
-                            <Link href="/" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-2 py-2 transition-colors hover:border-slate-300 hover:bg-slate-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                            <Link href="/" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-2 py-2 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30">
                                 <div className="scale-75 hover:scale-90 ease-in duration-200">
                                     <Image
                                         src="/MBLogo.png"
@@ -34,10 +34,10 @@ export default function Layout({ children, loading }: any) {
                         </div>
 
                         <div className="hidden lg:flex lg:gap-x-12">
-                            <Link href="experience" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-slate-300 hover:bg-slate-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                            <Link href="experience" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30">
                                 Experience
                             </Link>
-                            <Link href="resume" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-slate-300 hover:bg-slate-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+                            <Link href="resume" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30">
                                 Resume
                             </Link>
                         </div>
