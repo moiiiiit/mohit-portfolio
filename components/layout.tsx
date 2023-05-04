@@ -16,7 +16,7 @@ export default function Layout({ children, loading }: any) {
     return (
         <>
             <main
-                className={`${inter.className} min-h-screen min-w-screen`}
+                className={`${inter.className} min-h-screen min-w-screen bg-black`}
             >
                 <header>
                     <title>Mohit Bhole</title>
