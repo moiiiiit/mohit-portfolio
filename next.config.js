@@ -15,7 +15,6 @@ const nextConfig = {
       '/': { page: '/' },
       '/experience': { page: '/experience' },
       '/resume': { page: '/resume' },
-      '/life': { page: '/life' },
     }
   },
   eslint: {
