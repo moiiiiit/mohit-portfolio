@@ -40,9 +40,6 @@ export default function Layout({ children, loading }: any) {
                             <Link href="resume" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-slate-300 hover:bg-slate-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
                                 Resume
                             </Link>
-                            <Link href="life" className="text-sm font-semibold leading-6 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-slate-300 hover:bg-slate-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                                Life
-                            </Link>
                         </div>
                         <div className="hidden lg:flex"></div>
                         <div className="flex lg:hidden">
@@ -90,12 +87,6 @@ export default function Layout({ children, loading }: any) {
                                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-white"
                                         >
                                             Resume
-                                        </Link>
-                                        <Link
-                                            href="life"
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-white"
-                                        >
-                                            Life
                                         </Link>
                                     </div>
                                 </div>
