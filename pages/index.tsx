@@ -84,7 +84,7 @@ export default class Home extends React.Component {
 
             <p className="text-sm">--&gt; {this.state.description_1}</p>
             <p className="text-sm">--&gt; {this.state.description_2}</p>
-            <p className="text-sm">--&gt; This website is made with Next.js + Tailwind and uses Firebase for deployment and data storage.</p>
+            <p className="text-sm">--&gt; This website is made with Next.js + Tailwind and uses Firebase for deployment and data storage. <a style={{ color: "rgb(29 78 216)" }} href="https://github.com/moiiiiit/mohit-portfolio" target="_blank">[Github Link]</a></p>
           </div>
           <div className='flex flex-col gap-2 w-fit md:w-fit md:max-w-md self-center mx-6 md:mx-0'>
             <h2 className="text-xl font-mono mb-2 text-center md:text-left">Contact</h2>
