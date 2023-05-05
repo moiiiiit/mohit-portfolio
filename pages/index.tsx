@@ -69,9 +69,9 @@ export default class Home extends React.Component {
     return (
       <Layout loading={this.state.loading}>
         < div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between w-full h-full items-center my-10" >
-          <div className="flex flex-col gap-2 max-w-full md:max-w-lg lg:max-w-xl self-start mx-6 md:mx-0">
+          <div className="flex flex-col gap-2 max-w-full md:max-w-lg lg:max-w-2xl self-start mx-6 md:mx-0">
             <div className="flex flex-row items-center justify-between mb-6">
-              <div>
+              <div className="mr-6">
                 <h2 className="text-3xl font-mono mb-10">Namaste 🙏, <span style={{ whiteSpace: 'nowrap' }}>I{"'"}m <u className="underline-offset-4">{this.state.firstName}</u></span>
                 </h2>
                 <h3 className="text-xl mt-4">{this.state.title}</h3>
