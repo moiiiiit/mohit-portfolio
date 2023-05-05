@@ -111,7 +111,7 @@ export default class Home extends React.Component {
 
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 border-t border-slate-200 mt-2 pt-6 sm:mt-4 sm:pt-10 lg:mx-0 lg:grid-cols-2">
             {this.state.education.map((education, index) => (
-              <article key={index} className="flex max-w-xl flex-col items-start justify-between">
+              <article key={index} className="flex max-w-xl flex-col items-start justify-start">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={education['date']} className="text-slate-50">
                     {education['date']}
